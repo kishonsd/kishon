@@ -17,7 +17,7 @@
             flex-direction: column;
             align-items: center;
             background-color: #fff;
-            padding: 20px;
+            padding: 10px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         header img {
@@ -42,9 +42,22 @@
         }
         main {
             margin: 0;
-            padding: 20px;
+            padding: 50px;
             background-color: #fff;
             box-shadow: none;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .social-links a{
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
         }
         h1, h2, h3 {
             color: #333;
@@ -65,14 +78,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 40px;
+            margin-bottom: 80px;
         }
         @media (max-width: 768px) {
             main {
-                padding: 10x;
+                padding: 20x;
             }
             header {
-                padding: 10px;
+                padding: 20px;
             }
             nav {
                 position: static; /* Stack navigation below header on small screens */
@@ -84,28 +97,28 @@
 </head>
 <body>
     <header>
-        <img src="C:\Users\Kishon\Desktop\html5up-paradigm-shift\images\kdaniels.jpg" alt="Kishon Daniels">
-        <h1>Kishon Daniels</h1>
-        <h3>Software Engineer, Machine Learning Engineer, Neuroscientist</h3>
+        <img src="C:\Users\Kishon\Desktop\html5up-paradigm-shift\images\new_me.jpg" alt="Kishon Daniels">
+        <h2>Kishon Daniels</h2>
     </header>
     <main>
         <nav>
             <a href="index.html">Home</a>
             <a href="blog.html">Blog</a>
-            <a href="resume.html">Resume</a>
-            <a href="contact.html">Contact</a>
+            <a href="aboutme.html">About Me</a>
         </nav>
         <section>
-            <h2>Education</h2>
-            <p>Texas A&amp;M University-Texarkana - B.S. Political Science / History</p>
-            <p>Southern Methodist University - M.S. Computer Science / Artificial Intelligence</p>
+            <h3>Education:</h3>
+            <p>Texas A&amp;M University-Texarkana - B.S. Political Science, Minor in History</p>
+            <p>Southern Methodist University - M.S. Computer Science &amp; Artificial Intelligence</p>
         </section>
         <section>
-            <h2>Reach Me</h2>
-            <p><a href="link_to_social" target="_blank">Bluesky</a></p>
-            <p><a href="link_to_social" target="_blank">LinkedIn</a></p>
-            <p><a href="link_to_social" target="_blank">Github</a></p>
-            <p><a href="link_to_social" target="_blank">Kaggle</a></p>
+            <h3>Reach Me:</h3>
+            <div class="social-links">
+                <a href="link_to_social" target="_blank">Bluesky</a>
+                <a href="link_to_social" target="_blank">LinkedIn</a>
+                <a href="link_to_social" target="_blank">Github</a>
+                <a href="link_to_social" target="_blank">Kaggle</a>
+            </div>
         </section>
     </main>
 </body>
