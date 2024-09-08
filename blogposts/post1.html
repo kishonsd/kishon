@@ -44,18 +44,34 @@
         }
         main {
             margin: 0;
-            padding: 250px;
+            padding: 20px;
             background-color: #fff;
             box-shadow: none;
         }
         h1, h2, h3 {
             color: #333;
             margin: 0 0 10px 0;
+            word-wrap: break-word;
+            word-break: break-all;
+            text-align: center;
         }
         p {
             color: #555;
             margin: 0 0 10px 0;
+            word-wrap: break-word;
+            word-break: break-all;
+            max-width: 800px;
+            text-align: center;
         }
+
+        hr {
+            border: none; /* Remove the default border */
+            height: 1px; /* Line thickness */
+            background-color: #000000; /* Line color */
+            width: 0%; /* Line width */
+            margin: 10px auto; /* Space around the line */
+        }
+
         a {
             color: #007bff;
             text-decoration: none;
@@ -66,9 +82,11 @@
         section {
             display: flex;
             flex-direction: column;
+            flex-direction: column;
             align-items: center;
             margin-bottom: 40px;
         }
+        
         @media (max-width: 768px) {
             main {
                 padding: 10x;
@@ -81,6 +99,18 @@
                 text-align: center;
                 gap: 5px; /* Adjust gap for smaller screens */
             }
+            @viewport {
+                width: device-width ;
+                zoom: 1.0 ;
+}
+            p {
+            color: #555;
+            margin: 0 0 10px 0;
+            word-wrap: break-word;
+            word-break: break-all;
+            max-width: 1000px;
+            text-align: center;
+        }
         }
 
     </style>
@@ -95,8 +125,9 @@
     </header>
     <main>
         <section>
-            <h2>Utilizing Quantum Computing and Quantum Neural Networks To Model Human Decision Making</h2>
-            <p>
+            <h3 class="word-wrap">Utilizing Quantum Computing and Quantum Neural Networks To Model Human Decision Making</h3>
+            <hr>
+            <p class="word-wrap">
                 Rapid progress in quantum computing will benefit research on human decision making processes and behaviors. Quantum Neural Networks (QNN) is somewhat of a new development in AI which utilizes the power of quantum computing.
                 A study that compares the efficiency and complexity of quantum models against classical neural networks in replicating cognitive functions associated with decision making could provide new and exciting insights.
             </p>

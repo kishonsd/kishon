@@ -53,6 +53,10 @@
         p {
             color: #555;
             margin: 0 0 10px 0;
+            word-wrap: break-word;
+            word-break: break-all;
+            max-width: 800px;
+            text-align: center;
         }
         a {
             color: #007bff;
@@ -69,17 +73,19 @@
         }
         @media (max-width: 768px) {
             main {
-                padding: 20x;
+                padding: 10x;
             }
             header {
-                padding: 20px;
+                padding: 10px;
             }
             nav {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                display: flex;
-                gap: 10px;
+                position: static; /* Stack navigation below header on small screens */
+                text-align: center;
+                gap: 5px; /* Adjust gap for smaller screens */
+            }
+            @viewport {
+                width: device-width ;
+                zoom: 1.0 ;
             }
         }
 
