@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishon Daniels - Blog</title>
+    <title>Kishon - Blog</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
         body {
@@ -42,7 +42,7 @@
         }
         main {
             margin: 0;
-            padding: 20px;
+            padding: 150px;
             background-color: #fff;
             box-shadow: none;
         }
@@ -70,6 +70,25 @@
             flex-direction: column;
             align-items: center;
             margin-bottom: 40px;
+            margin: 20px auto;
+
+        }
+        .blog-entry{
+            border: 1px;
+            padding: 15px;
+            width: 100%;
+            max-width: 800px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .blog-entry a {
+            font-weight: 100;
+            text-decoration: none;
+            color: #000000;
+        }
+        .blog-entry a:hover {
+            text-decoration: underline;
         }
         @media (max-width: 768px) {
             main {
@@ -86,8 +105,16 @@
             @viewport {
                 width: device-width ;
                 zoom: 1.0 ;
-            }
         }
+        .blog-entry{
+            width: 90%;
+            max-width: 90%;
+            padding: 20px;
+            margin: 20px auto;
+        }
+        
+        
+    }
 
     </style>
 </head>
@@ -100,11 +127,9 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="blog-entry">
             <h3><a href="blogposts/post1.html">Utilizing Quantum Computing and Quantum Neural Networks To Model Human Decision Making</a></h3>
         </section>
     </main>
 </body>
 </html>
-
-

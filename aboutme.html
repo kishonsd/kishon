@@ -31,7 +31,6 @@
             right: 20px;
             display: flex;
             gap: 10px;
-            padding-bottom: 10px;
         }
         nav a {
             color: #007bff;
@@ -43,7 +42,7 @@
         }
         main {
             margin: 0;
-            padding: 50px;
+            padding: 150px;
             background-color: #fff;
             box-shadow: none;
         }
@@ -63,6 +62,7 @@
         h1, h2, h3 {
             color: #333;
             margin: 0 0 10px 0;
+            padding-top: 30px;
         }
         p {
             color: #555;
@@ -101,16 +101,30 @@
                 padding: 20px;
             }
             nav {
-                justify-content: center; /* Adjust gap for smaller screens */
-                flex-wrap: wrap;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                display: flex;
+                gap: 10px;
             }
-        } 
+            @viewport {
+                width: device-width ;
+                zoom: 1.0 ;
+            }
+            p {
+                color: #555;
+                margin: 0 0 10px 0;
+                word-wrap: break-word;
+                word-break: break-all;
+                max-width: 800px;
+                text-align: center;
+            }
+        }
 
     </style>
 </head>
 <body>
     <header>
-        <h2>About Me</h2>
     </header>
     <main>
         <nav>
@@ -120,8 +134,8 @@
         </nav>
         <section>
             <h3>Education:</h3>
-            <p>Texas A&amp;M University-Texarkana - B.S. Political Science, Minor in History</p>
-            <p>Southern Methodist University - M.S. Computer Science &amp; Artificial Intelligence</p>
+            <p class="word-wrap">Texas A&amp;M University-Texarkana - B.S. Political Science, Minor in History</p>
+            <p class="word-wrap">Southern Methodist University - M.S. Computer Science &amp; Artificial Intelligence</p>
         </section>
         <section>
             <h3>Reach Me:</h3>
