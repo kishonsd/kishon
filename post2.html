@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kishon Daniels - Blog</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 0;
+        }
+        header img {
+            max-width: 450px;
+            max-height: 450px;
+            margin-bottom: 50px;
+            margin-top: 80px;
+        }
+        footer {
+            background-color: #fff;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 10px;
+        }
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        nav a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            margin: 0px;
+            background-color: #fff;
+            box-shadow: none;
+        }
+        h1, h2, h3 {
+            color: #333;
+            margin: 0 0 10px 0;
+            word-wrap: break-word;
+            word-break: break-all;
+            text-align: center;
+        }
+        p {
+            color: #555;
+            margin: 0 0 10px 0;
+            word-break: normal;
+            word-wrap: normal;
+            width: 100%;
+            max-width: 800px;
+            justify-content: space-evenly;
+            text-indent: 10%;
+        }
+
+        hr {
+            border: none; /* Remove the default border */
+            height: 1px; /* Line thickness */
+            background-color: #000000; /* Line color */
+            width: 20%; /* Line width */
+            margin: 10px auto; /* Space around the line */
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p.first-line-indented {
+            text-indent: 2cm; /* or 20% */
+}
+        section {
+            display: flex;
+            flex-direction: column;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 80px;
+            justify-content:space-evenly;
+        }
+        
+        @media (max-width: 768px) {
+            main {
+                padding: 10x;
+            }
+            header {
+                padding: 10px;
+            }
+            nav {
+                position: static; /* Stack navigation below header on small screens */
+                text-align: center;
+                gap: 5px; /* Adjust gap for smaller screens */
+            }
+            @viewport {
+                width: device-width ;
+                zoom: 1.0 ;
+}
+            p {
+            color: #555;
+            margin: 0 0 10px 0;
+            word-wrap: break-word;
+            word-break: break-all;
+            max-width: 1000px;
+            text-align: center;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="aboutme.html">About Me</a>
+        </nav>
+            <img src="C:\Users\Kishon\Desktop\mysite\images\coritcalneurons.jpg" alt="Cortical Neurons">
+            <h3 class="word-wrap">A Future Through The Lens of Neuromorphic Computing</h3>
+    </header>
+    <main>
+        <section>
+            <hr>
+                <p>In the spring semester of the second year of my masters in computer science and machine learning I enrolled in a course on Computational Neuroscience. My goal was to gain a better understanding of the complex behaviors of organic neurons, and ultimately a better understanding of the artificial neural networks and computer vision projects I had built in my classes. What I did not expect, however, was to stumble upon a new and interesting area of research known as neuromorphic computing.</p>
+                <p>As I created different models of neural behavior (Leaky Integrate And Fire or LIF, Fitzhugh-Nagumo, Hodgkin-Huxley, etc.), the bigger picture began to form. Ion concentrations such as calcium, sodium, and potassium move in and out of the cell wall of the neuron via ion channels, which in turn causes the neuron to "spike", or release an action potential down the axon and toward the terminal of the presynaptic cleft. This process triggers opening of voltage gated calcium channels, allowing calcium ions to flow inward. The influx of calcium ions causes synaptic vesicles containing neurotransmitter to bind with the presynaptic membrane, releasing the neurotransmitters into the synaptic cleft.</p>
+                <p>The neurotransmitters then cross the cleft and bind to receptor proteins of the postsynaptic neuron. As a result of the neurotransmitters binding to the membrane of the post-synaptic neuron at the membrane, ion channels in the post-synaptic then open, allowing specific ions such as Sodium(Na+)and Potassium (K+) to flow into or out of the postsynaptic neuron.
+                From this point in this specific scenario, the movement of ions across the postsynaptic membrane causes a change in the membrane potential, which can either be excitatory or inhibitory. If the potential reaches a certain threshold, a new action potential is produced in the neuron, propagating down its axon.</p>
+                <p> you are familiar with or currently studying machine learning and neural networks, you may have already caught on to where this is going. Current LLM's such as Recurrent Neural Networks (RNN) and obviously Classical Neural Networks (CNN) typically rely on a feed forward method, feeding data to the successive layers of artificial neurons, applying a weight, bias, and some activation function (ReLU, Leaky ReLU, Sigmoid, etc), and then analyzing the output of data or feeding it back into the model.</p>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <h3>Reach Me:</h3>
+            <hr>
+            <div class="social-links">
+                <a href="link_to_social" target="_blank">Bluesky</a>
+                <a href="link_to_social" target="_blank">LinkedIn</a>
+                <a href="link_to_social" target="_blank">Github</a>
+                <a href="link_to_social" target="_blank">Kaggle</a>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

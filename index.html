@@ -109,11 +109,9 @@
                 padding: 20px;
             }
             nav {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                display: flex;
-                gap: 10px;
+                position: static; /* Stack navigation below header on small screens */
+                text-align: center;
+                gap: 5px; /* Adjust gap for smaller screens */
             }
             @viewport {
                 width: device-width ;
@@ -133,15 +131,15 @@
 </head>
 <body>
     <header>
-        <img src="C:\Users\Kishon\Desktop\html5up-paradigm-shift\images\new_me.jpg" alt="Kishon Daniels">
-        <h2>Kishon</h2>
-    </header>
-    <main>
         <nav>
             <a href="index.html">Home</a>
             <a href="blog.html">Blog</a>
             <a href="aboutme.html">About Me</a>
         </nav>
+        <img src="C:\Users\Kishon\Desktop\mysite\images\new_me.jpg" alt="Kishon">
+        <h2>Kishon</h2>
+    </header>
+    <main>
         <section>
             <p class="word-wrap">Welcome to my site. My name is Kishon and I am a graduate student currently studying computer science and machine learning.
                 You can find out more about me and also ways to reach me in the "About Me" section </p>
