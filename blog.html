@@ -70,7 +70,9 @@
             flex-direction: column;
             align-items: center;
             margin-bottom: 40px;
-            margin: 10px auto;
+            margin: 5px auto;
+            word-wrap: break-word;
+            word-break: break-all;
 
         }
         @media (max-width: 768px) {
@@ -87,8 +89,16 @@
             }
             @viewport {
                 width: device-width ;
-                zoom: 1.0 ;
-        } 
+                zoom: 0.5 ;
+        }
+        p {
+                color: #555;
+                margin: 0 0 10px 0;
+                word-wrap: break-word;
+                word-break: break-all;
+                max-width: 800px;
+                text-align: center;
+            } 
     }
 
     </style>
@@ -102,10 +112,10 @@
         </nav>
     </header>
     <main>
-        <section class="blog-entry">
+        <section class="word-wrap">
             <h3><a href="post1.html">Utilizing Quantum Computing and Quantum Neural Networks To Model Human Decision Making</a></h3>
         </section>
-        <section class="blog-entry">
+        <section class="word-wrap">
             <h3><a href="post2.html">A Future Through The Lens of Neuromorphic Computing</a></h3>
         </section>
     </main>
