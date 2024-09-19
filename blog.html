@@ -17,7 +17,7 @@
             flex-direction: column;
             align-items: center;
             background-color: #fff;
-            padding: 20px;
+            padding: 0; /* Remove padding at the top */
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         header img {
@@ -26,14 +26,21 @@
             margin-bottom: 15px;
         }
         nav {
-            position: absolute;
-            top: 20px;
-            right: 20px;
+            background: linear-gradient(90deg, #4a7499, #4a7499); /* Gradient background */
+            padding: 10px;
+            padding-top: 0px;
             display: flex;
-            gap: 10px;
+            justify-content: center; /* Center the links */
+            gap: 20px; /* Adjust space between links */
+            width: 100%; /* Full-width */
+            position: sticky; /* Keeps the nav at the top on scroll */
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(185, 180, 180, 0.1); /* Subtle shadow for a quality look */
+            margin: 0;
         }
         nav a {
-            color: #007bff;
+            color: #ffffff;
             text-decoration: none;
             font-weight: bold;
         }
@@ -59,7 +66,7 @@
             text-align: center;
         }
         a {
-            color: #007bff;
+            color: #ffffff;
             text-decoration: none;
         }
         a:hover {
@@ -80,13 +87,27 @@
                 padding: 20x;
             }
             header {
-                padding: 10px;
-            }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 0; /* Remove padding at the top */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
             nav {
-                position: static; /* Stack navigation below header on small screens */
-                text-align: center;
-                gap: 5px; /* Adjust gap for smaller screens */
-            }
+            background: linear-gradient(90deg, #4a7499, #4a7499); /* Gradient background */
+            padding: 10px;
+            padding-top: 0px;
+            display: flex;
+            justify-content: center; /* Center the links */
+            gap: 20px; /* Adjust space between links */
+            width: 100%; /* Full-width */
+            position: sticky; /* Keeps the nav at the top on scroll */
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(185, 180, 180, 0.1); /* Subtle shadow for a quality look */
+            margin: 0;
+        }
             section {
                 width: 90%; /* Use most of the available width */
                 max-width: 100%; /* Ensure no unnecessary restrictions */

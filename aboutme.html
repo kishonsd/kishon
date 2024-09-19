@@ -11,32 +11,39 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
         }
         header {
             display: flex;
             flex-direction: column;
             align-items: center;
             background-color: #fff;
-            padding: 20px;
-            padding-top: 80px;
+            padding: 0; /* Remove padding at the top */
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        
-        header img {
-            max-width: 450px;
-            max-height: 450px;
-            margin-bottom: 10px;
-            margin-top: 80px;
-        }
         nav {
-            position: absolute;
-            top: 20px;
-            right: 20px;
+            background: linear-gradient(90deg, #4a7499, #4a7499); /* Gradient background */
+            padding: 10px;
+            padding-top: 0px;
             display: flex;
-            gap: 10px;
+            justify-content: center; /* Center the links */
+            gap: 20px; /* Adjust space between links */
+            width: 100%; /* Full-width */
+            position: sticky; /* Keeps the nav at the top on scroll */
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(185, 180, 180, 0.1); /* Subtle shadow for a quality look */
+            margin: 0;
         }
         nav a {
-            color: #007bff;
+            color: #ffffff;
             text-decoration: none;
             font-weight: bold;
         }
@@ -63,9 +70,12 @@
             text-decoration: underline;
         }
         h1, h2, h3 {
-            color: #333;
+            color: #161616;
             margin: 0 0 10px 0;
             padding-top: 30px;
+        }
+        h3 {
+            font-weight:600;
         }
         p {
             color: #555;
@@ -84,7 +94,7 @@
             margin: 10px auto; /* Space around the line */
         }
         a {
-            color: #007bff;
+            color: #ffffff;
             text-decoration: none;
         }
         a:hover {
@@ -101,13 +111,27 @@
                 padding: 20x;
             }
             header {
-                padding: 20px;
-            }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 0; /* Remove padding at the top */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
             nav {
-                position: static; /* Stack navigation below header on small screens */
-                text-align: center;
-                gap: 5px; /* Adjust gap for smaller screens */
-            }
+            background: linear-gradient(90deg, #4a7499, #4a7499); /* Gradient background */
+            padding: 10px;
+            padding-top: 0px;
+            display: flex;
+            justify-content: center; /* Center the links */
+            gap: 20px; /* Adjust space between links */
+            width: 100%; /* Full-width */
+            position: sticky; /* Keeps the nav at the top on scroll */
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(185, 180, 180, 0.1); /* Subtle shadow for a quality look */
+            margin: 0;
+        }
             @viewport {
                 width: device-width ;
                 zoom: 1.0 ;
@@ -139,7 +163,9 @@
             <p class="word-wrap">Texas A&amp;M University-Texarkana - B.S. Political Science, Minor in History</p>
             <p class="word-wrap">Southern Methodist University - M.S. Computer Science &amp; Artificial Intelligence</p>
             <h3>Interests:</h3>
-            <p class="word-wrap">Machine Learning, Neuroscience, Quantum Computing, Physics, Aeronautics, Philosophy, Politics &</p>
+            <p class="word-wrap">I am interested in all things Machine Learning, Neuroscience, Quantum Computing, Physics, Aeronautics, Philosophy, Politics &amp; Art</p>
+            <h3>Hobbies:</h3>
+            <p class="word-wrap">In my free time I am either taking pilot lessons for my private license, reading, coding, building model rockets/robots, running, training Jiujitsu, or binge watching my favorite movies.   </p>
         </section>
         <section>
             <h3>Reach Me:</h3>
