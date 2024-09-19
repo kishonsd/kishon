@@ -25,6 +25,12 @@
             max-height: 450px;
             margin-bottom: 15px;
         }
+        footer {
+            background-color: #fff;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 10px;
+        }
         nav {
             background: linear-gradient(90deg, #4a7499, #4a7499); /* Gradient background */
             padding: 10px;
@@ -53,6 +59,19 @@
             background-color: #fff;
             box-shadow: none;
         }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .social-links a{
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
+        }
         h1, h2, h3 {
             color: #333;
             margin: 0 0 10px 0;
@@ -64,6 +83,13 @@
             word-break: break-all;
             max-width: 800px;
             text-align: center;
+        }
+        hr {
+            border: none; /* Remove the default border */
+            height: 1px; /* Line thickness */
+            background-color: #000000; /* Line color */
+            width: 20%; /* Line width */
+            margin: 10px auto; /* Space around the line */
         }
         a {
             color: #ffffff;
@@ -142,5 +168,17 @@
             <h3><a href="post2.html">A Future Through The Lens of Neuromorphic Computing</a></h3>
         </section>
     </main>
+    <footer>
+        <section>
+            <h3>Reach Me:</h3>
+            <hr>
+            <div class="social-links">
+                <a href="link_to_social" target="_blank">Bluesky</a>
+                <a href="link_to_social" target="_blank">LinkedIn</a>
+                <a href="link_to_social" target="_blank">Github</a>
+                <a href="link_to_social" target="_blank">Kaggle</a>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>
