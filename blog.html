@@ -104,11 +104,9 @@
             align-items: center;
             margin-bottom: 40px;
             margin: 5px auto;
-            word-wrap: break-word;
-            word-break: break-all;
         }
         .blog-meta {
-            font-size: 14px;
+            font-size: 12px;
             color: #777;
             margin-bottom: 10px;
             text-align: center;
@@ -144,18 +142,20 @@
             margin: 0;
         }
             section {
-                width: 90%; /* Use most of the available width */
+                width: 100%; /* Use most of the available width */
                 max-width: 100%; /* Ensure no unnecessary restrictions */
                 margin: 10px auto; /* Center section with auto margins */
             }
             section h3 {
-                font-size: 12px; /* Smaller font size for better fit */
+                font-size: 10px; /* Smaller font size for better fit */
                 text-align: center;
                 margin: 10px 0;
-                width: 100%
             }
             p, section {
-                word-wrap: break-word;
+                max-width: 100%;
+                text-align: center;
+                margin: 0 0 10px 0;
+                width: 100%
             }
         }
 
@@ -171,7 +171,7 @@
     </header>
     <main>
         <section class="break-word">
-            <h3><a href="post1.html">Utilizing Quantum Computing and Quantum Neural Networks To Model Human Decision Making</a></h3>
+            <h3><a href="post1.html">Using Quantum Computing and Quantum Neural Networks To Model Human Decision Making</a></h3>
             <div class="blog-meta">
                 <span class="blog-timestamp">September 18, 2024</span>
             </div>
