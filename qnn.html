@@ -17,20 +17,25 @@
             flex-direction: column;
             align-items: center;
             background-color: #fff;
-            padding: 0; /* Remove padding at the top */
+            padding: 0;
+            margin-bottom: 0%; 
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         header img {
             max-width: 450px;
             max-height: 450px;
             margin-bottom: 50px;
-            margin-top: 80px;
+            margin-top: 0px;
         }
         img {
-            max-width: 250px;
-            max-height: 250px;
-            margin-bottom: 10px;
-            margin-top: 80px;
+            max-width: 350px;
+            max-height: 350px;
+            margin-bottom: 50px;
+            margin-top: 0px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
         }
         footer {
             background-color: #fff;
@@ -39,18 +44,19 @@
             padding: 10px;
         }
         nav {
-            background: linear-gradient(90deg, #4a7499, #4a7499); /* Gradient background */
+            background: linear-gradient(90deg, #4a7499, #4a7499);
             padding: 10px;
             padding-top: 0px;
             display: flex;
-            justify-content: center; /* Center the links */
-            gap: 20px; /* Adjust space between links */
-            width: 100%; /* Full-width */
-            position: sticky; /* Keeps the nav at the top on scroll */
+            justify-content: center; 
+            gap: 20px; 
+            width: 100%; 
+            position: sticky; 
             top: 0;
             z-index: 100;
-            box-shadow: 0 4px 6px rgba(185, 180, 180, 0.1); /* Subtle shadow for a quality look */
+            box-shadow: 0 4px 6px rgba(185, 180, 180, 0.1);
             margin: 0;
+            margin-bottom: 100px;
         }
         nav a {
             color: #ffffff;
@@ -97,11 +103,12 @@
             text-indent: 10%;
         }
         hr {
-            border: none; /* Remove the default border */
-            height: 1px; /* Line thickness */
-            background-color: #000000; /* Line color */
-            width: 20%; /* Line width */
-            margin: 10px auto; /* Space around the line */
+            border: none;
+            height: 1px;
+            background-color: #000000;
+            width: 20%;
+            margin: 10px auto;
+            margin-bottom: 50px;
         }
         a {
             color: #ffffff;
@@ -115,6 +122,27 @@
             flex-direction: column;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            align-content: center;
+        }
+        pre, code {
+            background-color: #2e2e2e;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            overflow-x: auto;
+            max-width: 1000px;
+            width: 1000px;
+            height: 500px;
+        }
+        pre {
+            white-space: pre-wrap;
+            max-width: 600px;
+            max-height: 100px;
+            overflow: hidden;
+            align-content: center;
         }
         
         @media (max-width: 768px) {
@@ -134,13 +162,13 @@
             padding: 10px;
             padding-top: 0px;
             display: flex;
-            justify-content: center; /* Center the links */
-            gap: 20px; /* Adjust space between links */
-            width: 100%; /* Full-width */
-            position: sticky; /* Keeps the nav at the top on scroll */
+            justify-content: center; 
+            gap: 20px; 
+            width: 100%;
+            position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 4px 6px rgba(185, 180, 180, 0.1); /* Subtle shadow for a quality look */
+            box-shadow: 0 4px 6px rgba(185, 180, 180, 0.1);
             margin: 0;
         }
             @viewport {
@@ -153,12 +181,16 @@
             width: 80%;
             max-width: 100%;
             text-align: center;
-        }
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            font-size: small;
+            }
         img {
             width: 250px;
             max-width: 350px;
             max-height: 350px;
-            margin-bottom: 10px;
+            margin-bottom: 50px;
             margin-top: 80px;
         }
         h1, h2, h3 {
@@ -170,6 +202,30 @@
             width: 70%;
             max-width: 100%;
             
+        }
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #000000;
+            width: 40%;
+            margin: 10px auto;
+            margin-bottom: 50px;
+        }
+        pre, code {
+            background-color: #2e2e2e;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            overflow-x: hidden;
+        }
+        pre {
+            white-space: pre-wrap;
+            max-width: 400px;
+            max-height: 100px;
+            overflow: hidden;
+            align-content: center;
         }
     }
 
@@ -185,12 +241,13 @@
         </nav>
     </header>
     <main>
+        <img src="assets/images/coritcalneurons.jpg" alt="Cortical Neurons">
+        <h3 class="word-wrap">Predicting Qubit States With Quantum Neural Networks</h3>
+        <hr>
         <section>
-            <img src="assets/images/coritcalneurons.jpg" alt="Cortical Neurons">
-            <h3 class="word-wrap">Utilizing Quantum Computing and Quantum Neural Networks To Model Human Decision Making</h3>
-            <hr>
-            <p class="break-all">Rapid progress in quantum computing will benefit research on human decision making processes and behaviors. Quantum Neural Networks (QNN) is somewhat of a new development in AI which utilizes the power of quantum computing.
-                A study that compares the efficiency and complexity of quantum models against classical neural networks in replicating cognitive functions associated with decision making could provide new and exciting insights.</p>
+            <pre><code>
+                particle_paths = []
+</code></pre>
         </section>
     </main>
     <footer>
