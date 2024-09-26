@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kishon</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 0; /* Remove padding at the top */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        header img {
+            max-width: 450px;
+            max-height: 450px;
+            margin-bottom: 50px;
+            margin-top: 80px;
+        }
+        img {
+            max-width: 250px;
+            max-height: 250px;
+            margin-bottom: 10px;
+            margin-top: 80px;
+        }
+        footer {
+            background-color: #fff;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 10px;
+        }
+        nav {
+            background: linear-gradient(90deg, #4a7499, #4a7499); /* Gradient background */
+            padding: 10px;
+            padding-top: 0px;
+            display: flex;
+            justify-content: center; /* Center the links */
+            gap: 20px; /* Adjust space between links */
+            width: 100%; /* Full-width */
+            position: sticky; /* Keeps the nav at the top on scroll */
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(185, 180, 180, 0.1); /* Subtle shadow for a quality look */
+            margin: 0;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: none;
+        }
+        main {
+            margin: 0px;
+            background-color: #fff;
+            box-shadow: none;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .social-links a{
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        h1, h2, h3 {
+            color: #333;
+            margin: 0 0 10px 0;
+            word-wrap: break-word;
+            word-break: break-all;
+            text-align: center;
+        }
+        p {
+            font-size: 13px;
+            color: #555;
+            margin: 0 0 10px 0;
+            word-break: break-all;
+            word-wrap: normal;
+            width: 60%;
+            max-width: 100%;
+            justify-content: space-evenly;
+            text-indent: 10%;
+        }
+        hr {
+            border: none; /* Remove the default border */
+            height: 1px; /* Line thickness */
+            background-color: #000000; /* Line color */
+            width: 20%; /* Line width */
+            margin: 10px auto; /* Space around the line */
+        }
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        section {
+            display: flex;
+            flex-direction: column;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            main {
+                padding: 10x;
+            }
+            header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 0; /* Remove padding at the top */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+            nav {
+            background: linear-gradient(90deg, #4a7499, #4a7499); /* Gradient background */
+            padding: 10px;
+            padding-top: 0px;
+            display: flex;
+            justify-content: center; /* Center the links */
+            gap: 20px; /* Adjust space between links */
+            width: 100%; /* Full-width */
+            position: sticky; /* Keeps the nav at the top on scroll */
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(185, 180, 180, 0.1); /* Subtle shadow for a quality look */
+            margin: 0;
+        }
+            @viewport {
+                width: device-width ;
+                zoom: 0.5 ;
+            }
+            p {
+            color: #555;
+            margin: 0 0 10px 0;
+            width: 80%;
+            max-width: 100%;
+            text-align: center;
+        }
+        img {
+            width: 350px;
+            max-width: 350px;
+            max-height: 350px;
+            margin-bottom: 10px;
+            margin-top: 80px;
+        }
+        h1, h2, h3 {
+            color: #333;
+            margin: 0 0 10px 0;
+            word-wrap: break-word;
+            word-break: break-all;
+            text-align: center;
+            width: 70%;
+            max-width: 100%;
+            
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="aboutme.html">About Me</a>
+        </nav>
+        <img src="assets/images/chaostheory.jpg" alt="Cortical Neurons">
+        <h3 class="word-wrap">On Chaos Theory</h3>
+    </header>
+    <main>
+        <section>
+            <hr>
+            <p class="break-all">The popular mantra in regards to behavior, specifically human behavior, is that we as living breathing organisms are unpredictable. To go further and into the somewhat extreme view, we are “animalistic”. If you were sit in public and watch strangers going about their daily lives it would be hard to identify a pattern. Each person moves autonomously in relation to another. It appears to be the same if you were to disturb an ant pile and watch as each ant frantically made an exit from its initial dormant state.</p><p>Even more interesting is that even if you were to monitor an individual person closely for considerable amount of time, it would still be difficult to identify any patterns. That's where our assumptions diverge from being true. Patterns do exist but our minds, let alone our eyes, don't often recognize them. It is difficult to recognize these patterns, but not impossible.</p>
+            <p>The proof of this is at the core of chaos theory, which states that *systems which appear chaotic and indeterminate in nature are in fact predictable*.</p>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <h3>Reach Me:</h3>
+            <hr>
+            <div class="social-links">
+                <a href="https://bsky.app/profile/kishun.bsky.social" target="_blank">Bluesky</a>
+                <a href="https://github.com/kishonsd" target="_blank">Github</a>
+                <a href="https://www.kaggle.com/kishunn" target="_blank">Kaggle</a>
+                <a href="https://www.mathworks.com/matlabcentral/profile/authors/32782902?s_tid=gn_comm" target="_blank">MATLAB</a>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

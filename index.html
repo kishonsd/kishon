@@ -47,6 +47,35 @@
         nav a:hover {
             text-decoration: none;
         }
+        .menu-icon {
+            display: none; /* Initially hidden for larger screens */
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            margin-left: 10px;
+        }
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+        }
+        
+        ul.menu-items {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        ul.menu-items li {
+            display: inline;
+        }
+        ul.menu-items a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
         main {
             margin: 0;
             padding: 10px;
@@ -157,9 +186,16 @@
 <body>
     <header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="blog.html">Blog</a>
-            <a href="aboutme.html">About Me</a>
+            <div class="menu-icon" id="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul id="menu-items" class="menu-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+            </ul>
         </nav>
         <img src="assets/images/new_me.JPG" alt="Kishon">
         <h2>Kishon</h2>
@@ -180,5 +216,13 @@
             </div>
         </section>
     </main>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const menuItems = document.getElementById('menu-items');
+    
+        menuIcon.addEventListener('click', () => {
+            menuItems.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
