@@ -35,7 +35,17 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 50%;
+            width: 100%;
+        }
+        .project-img {
+            max-width: 750px;
+            max-height: 750px;
+            margin-bottom: 50px;
+            margin-top: 0px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
         }
         footer {
             background-color: #fff;
@@ -92,15 +102,12 @@
             text-align: center;
         }
         p {
-            font-size: 13px;
+            font-size: 14px;
             color: #555;
             margin: 0 0 10px 0;
-            word-break: break-all;
             word-wrap: normal;
             width: 60%;
             max-width: 100%;
-            justify-content: space-evenly;
-            text-indent: 10%;
         }
         hr {
             border: none;
@@ -125,26 +132,7 @@
             justify-content: center;
             align-content: center;
         }
-        pre, code {
-            background-color: #2e2e2e;
-            color: #ffffff;
-            padding: 10px;
-            border-radius: 5px;
-            font-family: 'Courier New', monospace;
-            font-size: 12px;
-            overflow-x: auto;
-            max-width: 1000px;
-            width: 1000px;
-            height: 500px;
-        }
-        pre {
-            white-space: pre-wrap;
-            max-width: 600px;
-            max-height: 100px;
-            overflow: hidden;
-            align-content: center;
-        }
-        
+    
         @media (max-width: 768px) {
             main {
                 padding: 10x;
@@ -170,6 +158,7 @@
             z-index: 100;
             box-shadow: 0 4px 6px rgba(185, 180, 180, 0.1);
             margin: 0;
+            margin-bottom: 50px;
         }
             @viewport {
                 width: device-width ;
@@ -180,27 +169,33 @@
             margin: 0 0 10px 0;
             width: 80%;
             max-width: 100%;
-            text-align: center;
-            text-align: center;
             align-items: center;
             justify-content: center;
             font-size: small;
+            word-wrap: normal;
             }
         img {
             width: 250px;
             max-width: 350px;
             max-height: 350px;
             margin-bottom: 50px;
-            margin-top: 80px;
+        }
+        .project-img {
+            max-width: 350px;
+            max-height: 350px;
+            margin-bottom: 50px;
+            margin-top: 0px;
+            display: block;
+            margin-left: 50px;
+            margin-right: 50px;
+            width: 100%;
         }
         h1, h2, h3 {
             color: #333;
             margin: 0 0 10px 0;
             word-wrap: break-word;
             word-break: break-all;
-            text-align: center;
-            width: 70%;
-            max-width: 100%;
+            font-size: 10px;
             
         }
         hr {
@@ -210,22 +205,6 @@
             width: 40%;
             margin: 10px auto;
             margin-bottom: 50px;
-        }
-        pre, code {
-            background-color: #2e2e2e;
-            color: #ffffff;
-            padding: 10px;
-            border-radius: 5px;
-            font-family: 'Courier New', monospace;
-            font-size: 11px;
-            overflow-x: hidden;
-        }
-        pre {
-            white-space: pre-wrap;
-            max-width: 400px;
-            max-height: 100px;
-            overflow: hidden;
-            align-content: center;
         }
     }
 
@@ -245,9 +224,11 @@
         <h3 class="word-wrap">Predicting Qubit States With Quantum Neural Networks</h3>
         <hr>
         <section>
-            <pre><code>
-                particle_paths = []
-</code></pre>
+            <p>We start by initializing our variable particle_paths, where we will store all paths generated for our dataset. We then create the quantum circuit consisting of 3 gates, and at the end of the circuit we will use measure_all to capture the behaviors of each particle.
+                I use the Qasm Simulator, and specify the number of particle paths I would like to be considered.</p>
+                <p> *Note that the total path number may fall just below the number you set*
+            </p>
+            <img src="assets/images/QNN_1.JPG" alt="Image 1" class="project-img">
         </section>
     </main>
     <footer>
