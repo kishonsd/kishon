@@ -94,6 +94,15 @@
         .social-links a:hover {
             text-decoration: underline;
         }
+        .social-links a{
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .other-links {
+            color: #4a7499;
+            text-decoration: none;
+        }
         h1, h2, h3 {
             color: #333;
             margin: 0 0 10px 0;
@@ -108,6 +117,14 @@
             word-wrap: normal;
             width: 60%;
             max-width: 100%;
+        }
+        .p-equations {
+            font-size: 15px;
+            color: #555;
+            margin: 0 0 10px 0;
+            width: 60%;
+            max-width: 100%;
+            text-align: center;
         }
         hr {
             border: none;
@@ -228,8 +245,12 @@
             <p>In quantum computing, a qubit is a basic unit of information used to encode quantum data. They are the essentially the quantum equivalent of the traditional "bit" used in classical computers to encode information in binary form (0's and 1's).
                 We can create qubits by manipulating quantum particles such as electrons, photons, and ions. Quantum computers use these qubits to perform advanced computations that would normally take a classical supercomputers thousands of years to complete.
                 Here, however, I use qubits as merely a representation of quantum particles because a sufficient quantum particle dataset is not accessible. </p>
-                <p>What does a qubit look like?</p>
+                <p>What does a qubit look like? Imagine a two-unit sphere with a north and south pole that lie on seperate points on the sphere:  </p>
             <img src="assets/images/Bloch_sphere.jpg" alt="Bloch_sphere" class="project-img">
+            <p>This visual representation of a qubit is known as a "Bloc Sphere". As mentioned earlier, in classical computers a bit is represented as a 0 or 1, but can only be either a 0 or 1 at any given time. Qubits can exist in a state of superposition of 0 or 1, meaning there are more possibilities of observed states.</p>
+                <p>The northern pole represents the state ∣0⟩, the southern pole represents the ∣1⟩ state, and the equator represents states of superposition. Additonally, the southern and northern quandrants are split further into easter nand western hemispheres. So in all there is an Eastern hemisphere of Northern hemisphere, Western hemisphere of Northern hemisphere, Western hemisphere of Northern hemisphere, and Western hemisphere of Southern hemisphere.</p>
+                <p>We will skip over most of the math for now, but a more thorough explanation can be found <a href="https://quantummlhandbook.vercel.app/docs/basics/superposition" target="_blank" class="other-links">here</a>.</p>
+
         </section>
     </main>
     <footer>
