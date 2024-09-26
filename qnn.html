@@ -38,8 +38,8 @@
             width: 100%;
         }
         .project-img {
-            max-width: 750px;
-            max-height: 750px;
+            max-width: 850px;
+            max-height: 850px;
             margin-bottom: 50px;
             margin-top: 0px;
             display: block;
@@ -195,7 +195,9 @@
             margin: 0 0 10px 0;
             word-wrap: break-word;
             word-break: break-all;
-            font-size: 10px;
+            text-align: center;
+            width: 70%;
+            max-width: 100%;
             
         }
         hr {
@@ -220,9 +222,9 @@
         </nav>
     </header>
     <main>
+        <section>
         <h3 class="word-wrap">Predicting Qubit States With Quantum Neural Networks</h3>
         <hr>
-        <section>
             <p>We start by initializing our variable particle_paths, where we will store all paths generated for our dataset. We then create the quantum circuit consisting of 3 gates, and at the end of the circuit we will use measure_all to capture the behaviors of each particle.
                 I use the Qasm Simulator, and specify the number of particle paths I would like to be considered.</p>
                 <p> *Note that the total path number may fall just below the number you set*
