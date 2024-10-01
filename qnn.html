@@ -245,16 +245,17 @@
             <p>In quantum computing, a qubit is a basic unit of information used to encode quantum data. They are essentially the quantum equivalent of the traditional "bit" used in classical computers to encode information in binary form (0's and 1's).
                 We can create qubits by manipulating quantum particles such as electrons, photons, and ions. Quantum computers use these qubits to perform advanced computations that would normally take a classical supercomputers thousands of years to complete.
                 Here, however, I use qubits as merely a representation of quantum particles because a sufficient quantum particle dataset is not accessible. </p>
-                <p>What does a qubit look like? Imagine a two-unit sphere with a north and south pole that lie on seperate points on the sphere:  </p>
+                <p>What does a qubit look like? Imagine a two-unit sphere with a north and south pole that lie on separate points on the sphere:  </p>
             <img src="assets/images/Bloch_sphere.jpg" alt="Bloch_sphere" class="project-img">
-            <p>This visual representation of a qubit is known as a "Bloc Sphere". As mentioned earlier, in classical computers a bit is represented as a 0 or 1, but can only be either a 0 or 1 at any given time. Qubits can exist in a state of superposition of 0 or 1, meaning there are more possibilities of observed states.</p>
-                <p>The northern pole represents the state ∣0⟩, the southern pole represents the ∣1⟩ state, and the equator represents states of superposition. Additonally, the southern and northern quandrants are split further into eastern and western hemispheres. So in all we have an Eastern hemisphere of Northern hemisphere, Western hemisphere of Northern hemisphere, Western hemisphere of Southern hemisphere, and Western hemisphere of Southern hemisphere.</p>
-                <p>We will skip over most of the math for now, but a more thorough explanation can be found <a href="https://quantummlhandbook.vercel.app/docs/basics/superposition" target="_blank" class="other-links">here</a>.</p>
+            <p>As mentione earlier, in classical computing a bit can only represent a 0 or 1, but a qubit can exist in a state of superposition of both 0 and 1 at the same time. The "Bloch Sphere" is a visualization of this superposition, where the north pole represents the state "0", the south pole represents the state "1", and any point on the sphere corresponds to a superposition of these two states.
+                The equator represents states with equal probability of being measured as a 0 or 1.
+            </p>
+                <p>We will skip over most of the math for now, but a more thorough explanation can be found <a href="https://www.quantum-inspire.com/kbase/what-is-a-qubit/" target="_blank" class="other-links">here</a>.</p>
                 <h3>Building The Network</h3>
                 <p>The model I have adapted for this project so far is:</p>
                 <p>(P=I<sub>i</sub>× W) x P(I<sub>i</sub> × W)</p>
                 <p>Where P = probability distribution of qubit states, I = initial state, and W is our weight.</p>
-                <p>This will be the first model, but it may be beneficial to implement additional models for scalability. I could add additional quantum gates other than the Hadamard gate, or I could incorporate additional circuit layers.</p>
+                <p>This will be the first model, but it may be beneficial to implement additional models for scalability. I could add additional quantum gates other than the Hadamard gate, or more circuit layers.</p>
 
 
         </section>
