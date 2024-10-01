@@ -13,93 +13,109 @@
             background-color: #fafafaf5;
         }
         header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #fff;
-            padding: 0; /* Remove padding at the top */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            position: relative;
+            width: 100%;
+            top: 0;
+            z-index: 1;
         }
         header img {
-            max-width: 350px;
-            max-height: 350px;
+            max-width: 150px;
+            max-height: 150px;
             margin-bottom: 10px;
             margin-top: 80px;
         }
-        nav {
-            background: linear-gradient(90deg, #4a7499, #4a7499); /* Gradient background */
-            padding: 10px;
-            padding-top: 0px;
+
+        .navbar {
             display: flex;
-            justify-content: center; /* Center the links */
-            gap: 20px; /* Adjust space between links */
-            width: 100%; /* Full-width */
-            position: sticky; /* Keeps the nav at the top on scroll */
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 6px rgba(185, 180, 180, 0.1); /* Subtle shadow for a quality look */
-            margin: 0;
+            justify-content: space-between;
+            align-items: center;
         }
-        nav a {
-            color: #ffffff;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: none;
-        }
-        .menu-icon {
-            display: none; /* Initially hidden for larger screens */
-            flex-direction: column;
+
+        .hamburger {
             cursor: pointer;
-            gap: 5px;
-            margin-left: 10px;
-        }
-        .bar {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             width: 25px;
+            height: 20px;
+        }
+
+        .bar {
+            width: 100%;
             height: 3px;
             background-color: white;
+            margin: 2px 0;
         }
-        
-        ul.menu-items {
-            list-style: none;
+
+        .nav-links {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Initially hidden off the screen */
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            transition: left 0.3s ease;
             display: flex;
-            gap: 20px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-links.active {
+            left: 0;
+        }
+
+        .nav-links ul {
+            list-style: none;
             margin: 0;
             padding: 0;
         }
-        ul.menu-items li {
-            display: inline;
+
+        .nav-links ul li {
+            margin-right: 20px;
         }
-        ul.menu-items a {
+
+        .nav-links ul li a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
+            padding: 10px 15px;
+            display: block;
         }
 
         main {
             margin: 0;
             padding: 10px;
+            padding-top: 250px;
+            padding-bottom: 400px;
             background-color: #fff;
             box-shadow: none;
         }
+
         .social-links {
             display: flex;
             justify-content: center;
             gap: 20px;
         }
-        .social-links a{
+
+        .social-links a {
             color: #000000;
             text-decoration: none;
             font-weight: bold;
         }
+
         .social-links a:hover {
             text-decoration: none;
         }
+
         h1, h2, h3 {
             color: #333;
             margin: 0 0 10px 0;
             padding-top: 30px;
         }
+
         p {
             color: #555;
             margin: 0 0 10px 0;
@@ -108,6 +124,7 @@
             max-width: 800px;
             text-align: center;
         }
+
         hr {
             border: none; /* Remove the default border */
             height: 1px; /* Line thickness */
@@ -115,89 +132,73 @@
             width: 20%; /* Line width */
             margin: 10px auto; /* Space around the line */
         }
+
         a {
             color: #007bff;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: none;
         }
+
         section {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-bottom: 30px;
         }
-        @media (max-width: 768px) {
+
+        @media (max-width: 600px) {
             main {
-                padding: 20x;
+                padding-top: 250px;
+                padding-bottom: 250px;
             }
-            header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #fff;
-            padding: 0; /* Remove padding at the top */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            .nav-links ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-links ul li {
+                margin: 0;
+            }
+
+            .nav-links ul li a {
+                text-align: center;
+                width: 100%;
+            }
         }
-        nav {
-            background: linear-gradient(90deg, #4a7499, #4a7499); /* Gradient background */
-            padding: 10px;
-            padding-top: 0px;
-            display: flex;
-            justify-content: center; /* Center the links */
-            gap: 20px; /* Adjust space between links */
-            width: 100%; /* Full-width */
-            position: sticky; /* Keeps the nav at the top on scroll */
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 6px rgba(185, 180, 180, 0.1); /* Subtle shadow for a quality look */
-            margin: 0;
-        }
-        
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-        }
+
         @viewport {
             width: device-width ;
             zoom: 1.0 ;
         }
-        p {
-            color: #555;
-            margin: 0 0 10px 0;
-            word-wrap: break-word;
-            word-break: break-all;
-            width: 80%;
-            max-width: 100%;
-            text-align: center;
-        }
-        header img {
-            max-width: 350px;
-            max-height: 350px;
-            margin-bottom: 10px;
-            margin-top: 80px;
-        }
-    }
 
     </style>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="blog.html">Blog</a>
-            <a href="aboutme.html">About Me</a>
-        </nav>
-        <img src="assets/images/new_me.JPG" alt="Kishon">
-        <h2>Kishon</h2>
+        <div class="navbar">
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
         <section>
             <p class="word-wrap">Welcome to my site. My name is Kishon and I am a graduate student currently studying computer science and machine learning.
-                You can find out more about me and also ways to reach me in the "About Me" section </p>
+                You can find out more about me and also ways to reach me in the "About Me" section</p>
         </section>
         <section>
             <h3>Reach Me:</h3>
@@ -210,13 +211,12 @@
             </div>
         </section>
     </main>
+
     <script>
-        const menuIcon = document.getElementById('menu-icon');
-        const menuItems = document.getElementById('menu-items');
-    
-        menuIcon.addEventListener('click', () => {
-            menuItems.classList.toggle('show');
-        });
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
