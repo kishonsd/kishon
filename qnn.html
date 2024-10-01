@@ -248,10 +248,10 @@
                 <p>What does a qubit look like? Imagine a two-unit sphere with a north and south pole that lie on seperate points on the sphere:  </p>
             <img src="assets/images/Bloch_sphere.jpg" alt="Bloch_sphere" class="project-img">
             <p>This visual representation of a qubit is known as a "Bloc Sphere". As mentioned earlier, in classical computers a bit is represented as a 0 or 1, but can only be either a 0 or 1 at any given time. Qubits can exist in a state of superposition of 0 or 1, meaning there are more possibilities of observed states.</p>
-                <p>The northern pole represents the state ∣0⟩, the southern pole represents the ∣1⟩ state, and the equator represents states of superposition. Additonally, the southern and northern quandrants are split further into eastern and western hemispheres. So in all we have an Eastern hemisphere of Northern hemisphere, Western hemisphere of Northern hemisphere, Western hemisphere of Northern hemisphere, and Western hemisphere of Southern hemisphere.</p>
+                <p>The northern pole represents the state ∣0⟩, the southern pole represents the ∣1⟩ state, and the equator represents states of superposition. Additonally, the southern and northern quandrants are split further into eastern and western hemispheres. So in all we have an Eastern hemisphere of Northern hemisphere, Western hemisphere of Northern hemisphere, Western hemisphere of Southern hemisphere, and Western hemisphere of Southern hemisphere.</p>
                 <p>We will skip over most of the math for now, but a more thorough explanation can be found <a href="https://quantummlhandbook.vercel.app/docs/basics/superposition" target="_blank" class="other-links">here</a>.</p>
                 <h3>Building The Network</h3>
-                <p>Mathematical models sit at the core of deep learning. The model I have adapted for this project so far is:</p>
+                <p>The model I have adapted for this project so far is:</p>
                 <p>P=I<sub>i</sub>× W x P(I<sub>i</sub> × W)</p>
                 <p>Where P = probability distribution of qubit states, I = initial state, and W is our weight.</p>
                 <p>This will be the first model, but it may be beneficial to implement additional models for scalability. I could add additional quantum gates other than the Hadamard gate, or I could incorporate additional circuit layers.</p>
