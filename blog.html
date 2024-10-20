@@ -105,8 +105,9 @@
             text-decoration: underline;
         }
         h1, h2, h3 {
-            color: #333;
+            color: #161616;
             margin: 0 0 10px 0;
+            padding-top: 30px;
         }
         p {
             color: #555;
@@ -166,7 +167,7 @@
                 width: 100%;
             }
             section {
-                width: 180%; /* Use most of the available width */
+                width: 100%; /* Use most of the available width */
                 max-width: 200%; /* Ensure no unnecessary restrictions */
                 margin: 10px auto;
                 font-size: 10px; /* Center section with auto margins */
@@ -180,7 +181,7 @@
                 margin-bottom: 10px;
                 font-size: 10px;
             }
-            p, section {
+            p {
                 width: 200%;
                 max-width: 250%;
                 text-align: center;
@@ -189,6 +190,14 @@
                 font-size: 10px;
                 
             }
+            img {
+                width: 250px;
+                height: 320px;
+                max-width: 450px;
+                max-height: 450px;
+                margin-bottom: 10px;
+                margin-top: 80px;
+        }
             @viewport {
                 width: device-width;
                 zoom: 1.0;
@@ -217,7 +226,7 @@
         </div>
     </header>
     <main>
-        <section class="break-word">
+        <section>
             <h3><a href="post2.html">A Future With Neuromorphic Computing</a></h3>
             <div class="blog-meta">
                 <span class="blog-timestamp">September 19, 2024</span>

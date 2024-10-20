@@ -109,11 +109,12 @@
             margin: 0 0 10px 0;
         }
         p {
+            font-size: 14px;
             color: #555;
             margin: 0 0 10px 0;
-            word-wrap: break-word;
+            word-wrap: normal;
             word-break: break-all;
-            max-width: 800px;
+            max-width: 60%;
             text-align: center;
         }
         hr {
@@ -148,7 +149,6 @@
             font-style: italic;
         }
         @media (max-width: 768px) {
-            @media (max-width: 768px) {
             main {
                 padding-top: 250px;
                 padding-bottom: 250px;
@@ -167,7 +167,7 @@
                 width: 100%;
             }
             section {
-                width: 180%; /* Use most of the available width */
+                width: 100%; /* Use most of the available width */
                 max-width: 200%; /* Ensure no unnecessary restrictions */
                 margin: 10px auto;
                 font-size: 10px; /* Center section with auto margins */
@@ -181,7 +181,7 @@
                 margin-bottom: 10px;
                 font-size: 10px;
             }
-            p, section {
+            p {
                 width: 200%;
                 max-width: 250%;
                 text-align: center;
@@ -190,29 +190,18 @@
                 font-size: 10px;
                 
             }
-            h3 {
-                width: 180%;
-                max-width: 200%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+            img {
+                width: 250px;
+                height: 320px;
+                max-width: 450px;
+                max-height: 450px;
                 margin-bottom: 10px;
-                font-size: 10px;
-            }
-            p, section {
-                width: 200%;
-                max-width: 250%;
-                text-align: center;
-                margin: 0 0 10px 0;
-                width: 100%;
-                font-size: 10px;
-                
-            }
+                margin-top: 80px;
+        }
             @viewport {
                 width: device-width;
                 zoom: 1.0;
             }
-        }
             
         }
 
@@ -237,8 +226,8 @@
         </div>
     </header>
     <main>
-        <section class="break-word">
-            <h3><a href="qnn.html">Predicting Probability Distributions With Quantum Neural Networks</a></h3>
+        <section>
+            <h3><a href="qnn.html">Predicting Probability Distributions With QNN's</a></h3>
             <div class="blog-meta">
                 <span class="blog-timestamp">November 13, 2023</span>
             </div>
