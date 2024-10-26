@@ -13,57 +13,83 @@
             background-color: #f8f9fa;
         }
         header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #fff;
-            padding: 0; /* Remove padding at the top */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        header img {
-            max-width: 450px;
-            max-height: 450px;
-            margin-bottom: 50px;
-            margin-top: 80px;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            position: relative;
+            width: 100%;
+            top: 0;
+            z-index: 1;
         }
         img {
-            max-width: 250px;
-            max-height: 250px;
-            margin-bottom: 10px;
-            margin-top: 80px;
+            max-width: 450px;
+            max-height: 450px;
+            margin-bottom: 15px;
         }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .hamburger {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 25px;
+            height: 20px;
+        }
+        .bar {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            margin: 2px 0;
+        }
+        .nav-links {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Initially hidden off the screen */
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            transition: left 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-links.active {
+            left: 0;
+        }
+
+        .nav-links ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links ul li {
+            margin-right: 20px;
+        }
+        .nav-links ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+        main {
+            margin: 0;
+            padding: 10px;
+            padding-top: 250px;
+            padding-bottom: 400px;
+            background-color: #fff;
+            box-shadow: none;
+        }
+
         footer {
             background-color: #fff;
             align-items: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             padding: 10px;
-        }
-        nav {
-            background: linear-gradient(90deg, #4a7499, #4a7499); /* Gradient background */
-            padding: 10px;
-            padding-top: 0px;
-            display: flex;
-            justify-content: center; /* Center the links */
-            gap: 20px; /* Adjust space between links */
-            width: 100%; /* Full-width */
-            position: sticky; /* Keeps the nav at the top on scroll */
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 6px rgba(185, 180, 180, 0.1); /* Subtle shadow for a quality look */
-            margin: 0;
-        }
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: none;
-        }
-        main {
-            margin: 0px;
-            background-color: #fff;
-            box-shadow: none;
         }
         .social-links {
             display: flex;
@@ -81,20 +107,15 @@
         h1, h2, h3 {
             color: #333;
             margin: 0 0 10px 0;
-            word-wrap: break-word;
-            word-break: break-all;
-            text-align: center;
         }
         p {
-            font-size: 13px;
+            font-size: 14px;
             color: #555;
             margin: 0 0 10px 0;
-            word-break: break-all;
             word-wrap: normal;
-            width: 60%;
-            max-width: 100%;
-            justify-content: space-evenly;
-            text-indent: 10%;
+            word-break: break-all;
+            max-width: 60%;
+            text-align: center;
         }
         hr {
             border: none; /* Remove the default border */
@@ -113,76 +134,96 @@
         section {
             display: flex;
             flex-direction: column;
-            flex-direction: column;
             align-items: center;
+            margin-bottom: 40px;
+            margin: 5px auto;
         }
-        
+        .blog-meta {
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .blog-timestamp {
+            font-style: italic;
+        }
         @media (max-width: 768px) {
             main {
-                padding: 10x;
+                padding-top: 250px;
+                padding-bottom: 250px;
             }
-            header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #fff;
-            padding: 0; /* Remove padding at the top */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-            nav {
-            background: linear-gradient(90deg, #4a7499, #4a7499); /* Gradient background */
-            padding: 10px;
-            padding-top: 0px;
-            display: flex;
-            justify-content: center; /* Center the links */
-            gap: 20px; /* Adjust space between links */
-            width: 100%; /* Full-width */
-            position: sticky; /* Keeps the nav at the top on scroll */
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 6px rgba(185, 180, 180, 0.1); /* Subtle shadow for a quality look */
-            margin: 0;
-        }
-            @viewport {
-                width: device-width ;
-                zoom: 0.5 ;
+            .nav-links ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-links ul li {
+                margin: 0;
+            }
+
+            .nav-links ul li a {
+                text-align: center;
+                width: 100%;
+            }
+            section {
+                width: 100%; /* Use most of the available width */
+                max-width: 200%; /* Ensure no unnecessary restrictions */
+                margin: 10px auto;
+                font-size: 10px; /* Center section with auto margins */
+            }
+            h3 {
+                width: 180%;
+                max-width: 200%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 10px;
+                font-size: 10px;
             }
             p {
-            color: #555;
-            margin: 0 0 10px 0;
-            width: 80%;
-            max-width: 100%;
-            text-align: center;
+                width: 200%;
+                max-width: 250%;
+                text-align: center;
+                margin: 0 0 10px 0;
+                width: 100%;
+                font-size: 10px;
+                
+            }
+            img {
+                width: 250px;
+                height: 320px;
+                max-width: 450px;
+                max-height: 450px;
+                margin-bottom: 10px;
+                margin-top: 20px;
         }
-        img {
-            width: 250px;
-            max-width: 350px;
-            max-height: 350px;
-            margin-bottom: 10px;
-            margin-top: 80px;
-        }
-        h1, h2, h3 {
-            color: #333;
-            margin: 0 0 10px 0;
-            word-wrap: break-word;
-            word-break: break-all;
-            text-align: center;
-            width: 70%;
-            max-width: 100%;
+            @viewport {
+                width: device-width;
+                zoom: 1.0;
+            }
             
         }
-    }
 
     </style>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="blog.html">Blog</a>
-            <a href="aboutme.html">About Me</a>
-        </nav>
+        <div class="navbar">
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section>
@@ -205,5 +246,11 @@
             </div>
         </section>
     </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

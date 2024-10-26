@@ -10,7 +10,7 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fafafaf5;
+            background-color: #f8f9fa;
         }
         header {
             background-color: #333;
@@ -22,18 +22,15 @@
             z-index: 1;
         }
         header img {
-            max-width: 150px;
-            max-height: 150px;
-            margin-bottom: 10px;
-            margin-top: 80px;
+            max-width: 450px;
+            max-height: 450px;
+            margin-bottom: 15px;
         }
-
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         .hamburger {
             cursor: pointer;
             display: flex;
@@ -42,14 +39,12 @@
             width: 25px;
             height: 20px;
         }
-
         .bar {
             width: 100%;
             height: 3px;
             background-color: white;
             margin: 2px 0;
         }
-
         .nav-links {
             position: fixed;
             top: 0;
@@ -63,7 +58,6 @@
             justify-content: center;
             align-items: center;
         }
-
         .nav-links.active {
             left: 0;
         }
@@ -73,18 +67,15 @@
             margin: 0;
             padding: 0;
         }
-
         .nav-links ul li {
             margin-right: 20px;
         }
-
         .nav-links ul li a {
             color: white;
             text-decoration: none;
             padding: 10px 15px;
             display: block;
         }
-
         main {
             margin: 0;
             padding: 10px;
@@ -93,44 +84,39 @@
             background-color: #fff;
             box-shadow: none;
         }
+
         footer {
             background-color: #fff;
             align-items: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             padding: 10px;
         }
-
         .social-links {
             display: flex;
             justify-content: center;
             gap: 20px;
         }
-
-        .social-links a {
+        .social-links a{
             color: #000000;
             text-decoration: none;
             font-weight: bold;
         }
-
         .social-links a:hover {
-            text-decoration: none;
+            text-decoration: underline;
         }
-
         h1, h2, h3 {
             color: #333;
             margin: 0 0 10px 0;
-            padding-top: 30px;
         }
-
         p {
+            font-size: 14px;
             color: #555;
             margin: 0 0 10px 0;
-            word-wrap: break-word;
+            word-wrap: normal;
             word-break: break-all;
-            max-width: 800px;
+            max-width: 60%;
             text-align: center;
         }
-
         hr {
             border: none; /* Remove the default border */
             height: 1px; /* Line thickness */
@@ -138,24 +124,31 @@
             width: 20%; /* Line width */
             margin: 10px auto; /* Space around the line */
         }
-
         a {
-            color: #007bff;
+            color: #ffffff;
             text-decoration: none;
         }
-
         a:hover {
             text-decoration: none;
         }
-
         section {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            margin: 5px auto;
+        }
+        .blog-meta {
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 10px;
+            text-align: center;
         }
 
-        @media (max-width: 600px) {
+        .blog-timestamp {
+            font-style: italic;
+        }
+        @media (max-width: 768px) {
             main {
                 padding-top: 250px;
                 padding-bottom: 250px;
@@ -173,11 +166,43 @@
                 text-align: center;
                 width: 100%;
             }
+            section {
+                width: 100%; /* Use most of the available width */
+                max-width: 200%; /* Ensure no unnecessary restrictions */
+                margin: 10px auto;
+                font-size: 10px; /* Center section with auto margins */
+            }
+            h3 {
+                width: 180%;
+                max-width: 200%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 10px;
+                font-size: 10px;
+            }
+            p {
+                width: 200%;
+                max-width: 250%;
+                text-align: center;
+                margin: 0 0 10px 0;
+                width: 100%;
+                font-size: 10px;
+                
+            }
+            img {
+                width: 250px;
+                height: 320px;
+                max-width: 450px;
+                max-height: 450px;
+                margin-bottom: 10px;
+                margin-top: 80px;
         }
-
-        @viewport {
-            width: device-width ;
-            zoom: 1.0 ;
+            @viewport {
+                width: device-width;
+                zoom: 1.0;
+            }
+            
         }
 
     </style>
@@ -200,12 +225,13 @@
             </nav>
         </div>
     </header>
-
     <main>
         <section>
             <p class="word-wrap">Welcome to my site. My name is Kishon and I am a graduate student currently studying computer science and machine learning.
                 You can find out more about me and also ways to reach me in the "About Me" section</p>
         </section>
+    </main>
+    <footer>
         <section>
             <h3>Reach Me:</h3>
             <hr>
@@ -216,8 +242,7 @@
                 <a href="https://www.mathworks.com/matlabcentral/profile/authors/32782902?s_tid=gn_comm" target="_blank">MATLAB</a>
             </div>
         </section>
-    </main>
-
+    </footer>
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');

@@ -27,8 +27,8 @@
             margin-top: 80px;
         }
         img {
-            max-width: 250px;
-            max-height: 250px;
+            max-width: 450px;
+            max-height: 450px;
             margin-bottom: 10px;
             margin-top: 80px;
         }
@@ -84,9 +84,6 @@
             word-wrap: break-word;
             word-break: break-all;
             text-align: center;
-            width: 70%;
-            max-width: 100%;
-            
         }
         p {
             font-size: 13px;
@@ -99,7 +96,6 @@
             justify-content: space-evenly;
             text-indent: 10%;
         }
-
         hr {
             border: none; /* Remove the default border */
             height: 1px; /* Line thickness */
@@ -107,24 +103,18 @@
             width: 20%; /* Line width */
             margin: 10px auto; /* Space around the line */
         }
-
         a {
             color: #ffffff;
             text-decoration: none;
         }
         a:hover {
-            text-decoration: underline;
+            text-decoration: none;
         }
-        p.first-line-indented {
-            text-indent: 2cm; /* or 20% */
-}
         section {
             display: flex;
             flex-direction: column;
             flex-direction: column;
             align-items: center;
-
-            justify-content:space-evenly;
         }
         
         @media (max-width: 768px) {
@@ -158,19 +148,18 @@
                 zoom: 0.5 ;
             }
             p {
-                color: #555;
-                margin: 0 0 10px 0;
-                width: 80%;
-                max-width: 100%;
-                text-align: center;
-                font-size: 10px;
-            }
-            img {
-                width: 250px;
-                max-width: 350px;
-                max-height: 350px;
-                margin-bottom: 10px;
-                margin-top: 80px;
+            color: #555;
+            margin: 0 0 10px 0;
+            width: 80%;
+            max-width: 100%;
+            text-align: center;
+        }
+        img {
+            width: 250px;
+            max-width: 350px;
+            max-height: 350px;
+            margin-bottom: 15px;
+            margin-top: 80px;
         }
         h1, h2, h3 {
             color: #333;
@@ -178,11 +167,11 @@
             word-wrap: break-word;
             word-break: break-all;
             text-align: center;
-            width: 65%;
+            width: 70%;
             max-width: 100%;
             
         }
-        }
+    }
 
     </style>
 </head>
@@ -194,18 +183,24 @@
             <a href="blog.html">Blog</a>
             <a href="aboutme.html">About Me</a>
         </nav>
-        <img src="assets/images/coritcalneurons.jpg" alt="Cortical Neurons">
-        <h3 class="word-wrap">A Future Through The Lens of Neuromorphic Computing</h3>
     </header>
     <main>
         <section>
+            <img src="assets/images/Zephyr.jpg" alt="Zephyr Rocket">
+            <h3 class="word-wrap">Zephyr High Power Rocket</h3>
             <hr>
-                <p>Biological neural systems are complex but not too complex beyond understanding.Ion concentrations such as calcium, sodium, and potassium move in and out of the cell wall of the neuron via ion channels, which in turn causes the neuron to "spike", or release an action potential down the axon and toward the terminal of the presynaptic cleft. This process triggers opening of voltage gated calcium channels, allowing calcium ions to flow inward. The influx of calcium ions causes synaptic vesicles containing neurotransmitter to bind with the presynaptic membrane, releasing the neurotransmitters into the synaptic cleft.</p>
-                <p>The neurotransmitters then cross the cleft and bind to receptor proteins of the postsynaptic neuron. As a result of the neurotransmitters binding to the membrane of the post-synaptic neuron at the membrane, ion channels in the post-synaptic then open, allowing specific ions such as Sodium(Na+)and Potassium (K+) to flow into or out of the postsynaptic neuron.
-                From this point in this specific scenario, the movement of ions across the postsynaptic membrane causes a change in the membrane potential, which can either be excitatory or inhibitory. If the potential reaches a certain threshold, a new action potential is produced in the neuron, propagating down its axon.</p>
-                <p> you are familiar with or currently studying machine learning and neural networks, you may have already caught on to where this is going. Current LLM's such as Recurrent Neural Networks (RNN) and obviously Classical Neural Networks (CNN) typically rely on a feed forward method, feeding data to the successive layers of artificial neurons, applying a weight, bias, and some activation function (ReLU, Leaky ReLU, Sigmoid, etc), and then analyzing the output of data or feeding it back into the model. These methods have been effective, but there is an issue with how well and accurate they mimic real biological systems.</p>
-                <p>Neuromorphic computing offers a newer approach to designing these neural networks. Unlike traditional Large Language Models (LLMs), the designs of neuromorphic systems resemble the true structure and function of the human brain, simulating biological neurons and synapses with spiking neural networks (SNNs). Neuromorphic systems also reduce power consumption by processing information in a more efficient way by spiking only when there is enough input, rather than continuously updating weights across all layers. This is no simple task however, because building a neuromorphic system means each artificial neuron should only activate and fire if a certain potential (as in membrane potential) is reached.</p>
-                <p>As of now research has been limited, but we may see an increase in interest as more viable ways to reduce power consumption are considered and engineers and researchers move away from traditional models.</p>
+            <p class="break-all">Model: 04997</p>
+            <p class="break-all">Length: 56.400" (143.26 cm)</p>
+            <p class="break-all">Model: 04997</p>
+            <p class="break-all">Weight: 44.000 oz (1247.38 g)</p>
+            <p class="break-all">Diameter (Max): 4.000" (10.16 cm)</p>
+            <p class="break-all">Fin Span: 12.880" (32.72 cm)</p>
+            <p class="break-all">Fin Count: 3</p>
+            <p class="break-all">Motor Size: 38mm</p>
+            <p class="break-all">Recovery System: 36" Nylon Parachute</p>
+            <p class="break-all">CP Location: 44.89" (114.02 cm) from the tip of the nose cone</p>
+            <p class="break-all">** Manufactured by: Apogee **</p>
+
         </section>
     </main>
     <footer>
