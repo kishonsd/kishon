@@ -1,0 +1,15 @@
+# Ignore specific files
+aboutme.html
+blog.html
+chaos_theory.html
+darkpaw.html
+existence.html
+future_with_neuromorphic.html
+projects.html
+qnn.html
+quantum_and_decision_making.html
+zephyrrocket.html
+aboutme.html
+
+assets/
+html5up-paradigm-shift/
