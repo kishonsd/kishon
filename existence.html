@@ -3,265 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishon</title>
-    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Existence - kishon</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            position: relative;
-            width: 100%;
-            top: 0;
-            z-index: 1;
-        }
-        header img {
-            max-width: 450px;
-            max-height: 450px;
-            margin-bottom: 15px;
-        }
-        img {
-            max-width: 350px;
-            max-height: 350px;
-            margin-bottom: 50px;
-            margin-top: 0px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 100%;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .hamburger {
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 25px;
-            height: 20px;
-        }
-        .bar {
-            width: 100%;
-            height: 3px;
-            background-color: white;
-            margin: 2px 0;
-        }
-        .nav-links {
-            position: fixed;
-            top: 0;
-            left: -250px; /* Initially hidden off the screen */
-            width: 250px;
-            height: 100%;
-            background-color: #333;
-            transition: left 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .nav-links.active {
-            left: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            padding: 2rem 1rem;
+            max-width: 680px;
+            margin: 0 auto;
         }
 
-        .nav-links ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .nav-links ul li {
-            margin-right: 20px;
-        }
-        .nav-links ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: block;
-        }
-        main {
-            margin: 0;
-            padding: 10px;
-            padding-top: 250px;
-            padding-bottom: 400px;
-            background-color: #fff;
-            box-shadow: none;
+        .header {
+            margin-bottom: 3rem;
         }
 
-        footer {
-            background-color: #fff;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 10px;
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .social-links a{
-            color: #000000;
+        .back-link {
+            color: #0066cc;
             text-decoration: none;
-            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: inline-block;
         }
-        .social-links a:hover {
+
+        .back-link:hover {
             text-decoration: underline;
         }
-        h1, h2, h3 {
-            color: #333;
-            margin: 0 0 10px 0;
-        }
-        p {
-            font-size: 14px;
-            color: #555;
-            margin: 0 0 10px 0;
-            word-wrap: normal;
-            word-break: break-all;
-            max-width: 60%;
-            text-align: center;
-        }
-        hr {
-            border: none; /* Remove the default border */
-            height: 1px; /* Line thickness */
-            background-color: #000000; /* Line color */
-            width: 20%; /* Line width */
-            margin: 10px auto; /* Space around the line */
-        }
-        a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: none;
-        }
-        section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 40px;
-            margin: 5px auto;
-        }
-        .blog-meta {
-            font-size: 12px;
-            color: #777;
-            margin-bottom: 10px;
-            text-align: center;
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #000;
+            line-height: 1.3;
         }
 
-        .blog-timestamp {
-            font-style: italic;
-        }
-        @media (max-width: 768px) {
-            main {
-                padding-top: 250px;
-                padding-bottom: 250px;
-            }
-            .nav-links ul {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .nav-links ul li {
-                margin: 0;
-            }
-
-            .nav-links ul li a {
-                text-align: center;
-                width: 100%;
-            }
-            section {
-                width: 100%; /* Use most of the available width */
-                max-width: 200%; /* Ensure no unnecessary restrictions */
-                margin: 10px auto;
-                font-size: 10px; /* Center section with auto margins */
-            }
-            h3 {
-                width: 180%;
-                max-width: 200%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-bottom: 10px;
-                font-size: 10px;
-            }
-            p {
-                width: 200%;
-                max-width: 250%;
-                text-align: center;
-                margin: 0 0 10px 0;
-                width: 100%;
-                font-size: 10px;
-                
-            }
-            img {
-                width: 250px;
-                height: 250px;
-                max-width: 450px;
-                max-height: 450px;
-                margin-bottom: 10px;
-                margin-top: 80px;
-        }
-            @viewport {
-                width: device-width;
-                zoom: 1.0;
-            }
-            
+        .date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
         }
 
+        .content {
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .blog-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="hamburger" onclick="toggleMenu()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <nav class="nav-links" id="navLinks">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="aboutme.html">About Me</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <section>
-            <img src="assets/images/existence.jpg" alt="Existence">
-            <h3 class="word-wrap">Existence</h3>
-            <hr>
-            <p class="break-all">Existence is strange. We awaken to a thing that we cant explain. A thing that, to us individually, does not exist until we reemerge from sleep. A thing that is not the same characteristically for one person as it is the next person. A thing that was here before you and I and will likely remain after. A thing that cannot be measured, or even traced back to a specific point in time, and the ending point of it cannot be estimated accurately enough to be considered at all. Yet we feel it, we see it, so we know it is real. It exists.
-                 Existence exists. The nonexistent is even more strange. How can you imagine something that never existed? Something that has gone “extinct” does not satisfy the requirement of being truly nonexistent. You and I exist. Things around us exist. Does time exist? We dont feel it. We technically cant see it. We cant hear or smell or use any of the senses gifted to us to say that time exists.</p>
-                  <p>Despite that time is what solidifies our belief of existence. We go about our daily lives only questioning what all of this is on some random and short-lived moments, only to be reminded that time continues on and that lingering on the unanswerable question does not benefit us enough to justify lingering on the question at all. But that would be the wrong approach. Asking the question alone is better than ignoring it. We contribute to our existence by acknowledging the strangeness of it. Some go even further in attempting to find an answer for why all of this is what it is, but that's by choice and not a necessity. Perhaps our reality, what is real to us, what exists to us, exists and will continue to exist so long as we acknowledge it so long as we poke and prod at it so that we can obtain some understanding of it. At least more than we did the day before.</p>
-        </section>
-    </main>
-    <footer>
-        <section>
-            <h3>Reach Me:</h3>
-            <hr>
-            <div class="social-links">
-                <a href="https://bsky.app/profile/kishun.bsky.social" target="_blank">Bluesky</a>
-                <a href="https://github.com/kishonsd" target="_blank">Github</a>
-                <a href="https://www.kaggle.com/kishunn" target="_blank">Kaggle</a>
-                <a href="https://www.mathworks.com/matlabcentral/profile/authors/32782902?s_tid=gn_comm" target="_blank">MATLAB</a>
-            </div>
-        </section>
-    </footer>
-    <script>
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-    </script>
+    <div class="header">
+        <a href="blog.html" class="back-link">← back to blog</a>
+        <h1>Existence</h1>
+        <div class="date">September 29, 2024</div>
+    </div>
+
+    <div class="content">
+        <img src="assets/images/existence.jpg" alt="Existence" class="blog-image">
+        
+        <p>Existence is strange. We awaken to a thing that we can't explain. A thing that, to us individually, does not exist until we reemerge from sleep. A thing that is not the same characteristically for one person as it is the next person. A thing that was here before you and I and will likely remain after. A thing that cannot be measured, or even traced back to a specific point in time, and the ending point of it cannot be estimated accurately enough to be considered at all. Yet we feel it, we see it, so we know it is real. It exists.</p>
+
+        <p>Existence exists. The nonexistent is even more strange. How can you imagine something that never existed? Something that has gone "extinct" does not satisfy the requirement of being truly nonexistent. You and I exist. Things around us exist. Does time exist? We don't feel it. We technically can't see it. We can't hear or smell or use any of the senses gifted to us to say that time exists.</p>
+
+        <p>Despite that time is what solidifies our belief of existence. We go about our daily lives only questioning what all of this is on some random and short-lived moments, only to be reminded that time continues on and that lingering on the unanswerable question does not benefit us enough to justify lingering on the question at all. But that would be the wrong approach. Asking the question alone is better than ignoring it. We contribute to our existence by acknowledging the strangeness of it. Some go even further in attempting to find an answer for why all of this is what it is, but that's by choice and not a necessity. Perhaps our reality, what is real to us, what exists to us, exists and will continue to exist so long as we acknowledge it so long as we poke and prod at it so that we can obtain some understanding of it. At least more than we did the day before.</p>
+    </div>
 </body>
 </html>

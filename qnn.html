@@ -3,275 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishon</title>
-    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Predicting Probability Distributions With Quantum Neural Networks - kishon</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            position: relative;
-            width: 100%;
-            top: 0;
-            z-index: 1;
-        }
-        header img {
-            max-width: 450px;
-            max-height: 450px;
-            margin-bottom: 15px;
-        }
-        img {
-            max-width: 350px;
-            max-height: 350px;
-            margin-bottom: 50px;
-            margin-top: 0px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 100%;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .hamburger {
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 25px;
-            height: 20px;
-        }
-        .bar {
-            width: 100%;
-            height: 3px;
-            background-color: white;
-            margin: 2px 0;
-        }
-        .nav-links {
-            position: fixed;
-            top: 0;
-            left: -250px; /* Initially hidden off the screen */
-            width: 250px;
-            height: 100%;
-            background-color: #333;
-            transition: left 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .nav-links.active {
-            left: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            padding: 2rem 1rem;
+            max-width: 680px;
+            margin: 0 auto;
         }
 
-        .nav-links ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .nav-links ul li {
-            margin-right: 20px;
-        }
-        .nav-links ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: block;
-        }
-        main {
-            margin: 0;
-            padding: 10px;
-            padding-top: 250px;
-            padding-bottom: 400px;
-            background-color: #fff;
-            box-shadow: none;
+        .header {
+            margin-bottom: 3rem;
         }
 
-        footer {
-            background-color: #fff;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 10px;
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .social-links a{
-            color: #000000;
+        .back-link {
+            color: #0066cc;
             text-decoration: none;
-            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: inline-block;
         }
-        .social-links a:hover {
+
+        .back-link:hover {
             text-decoration: underline;
         }
-        h1, h2, h3 {
-            color: #333;
-            margin: 0 0 10px 0;
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #000;
+            line-height: 1.3;
         }
-        p {
-            display: inline-block;
-            font-size: 14px;
-            color: #555;
-            margin: 0 0 10px 0;
-            word-break: normal;
-            max-width: 60%;
-            text-align: left;
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+            color: #000;
         }
-        hr {
-            border: none; /* Remove the default border */
-            height: 1px; /* Line thickness */
-            background-color: #000000; /* Line color */
-            width: 20%; /* Line width */
-            margin: 10px auto; /* Space around the line */
+
+        .date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
         }
-        a {
-            color: #ffffff;
+
+        .content {
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .blog-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .content a {
+            color: #0066cc;
             text-decoration: none;
         }
-        a:hover {
-            text-decoration: none;
+
+        .content a:hover {
+            text-decoration: underline;
         }
-        section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 40px;
-            margin: 5px auto;
-        }
-        .blog-meta {
-            font-size: 12px;
-            color: #777;
-            margin-bottom: 10px;
+
+        .formula {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
             text-align: center;
+            margin: 1.5rem 0;
         }
 
-        .blog-timestamp {
-            font-style: italic;
-        }
-        @media (max-width: 768px) {
-            main {
-                padding-top: 250px;
-                padding-bottom: 250px;
-            }
-            .nav-links ul {
-                flex-direction: column;
-                width: 100%;
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.5rem;
             }
 
-            .nav-links ul li {
-                margin: 0;
+            h1 {
+                font-size: 1.5rem;
             }
-
-            .nav-links ul li a {
-                text-align: center;
-                width: 100%;
-            }
-            section {
-                width: 100%; /* Use most of the available width */
-                max-width: 200%; /* Ensure no unnecessary restrictions */
-                margin: 10px auto;
-                font-size: 10px; /* Center section with auto margins */
-            }
-            h3 {
-                width: 180%;
-                max-width: 200%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-bottom: 10px;
-                font-size: 10px;
-            }
-            p {
-                width: 200%;
-                max-width: 250%;
-                text-align: center;
-                margin: 0 0 10px 0;
-                width: 100%;
-                font-size: 10px;
-                
-            }
-            img {
-                width: 250px;
-                height: 250px;
-                max-width: 450px;
-                max-height: 450px;
-                margin-bottom: 10px;
-                margin-top: 80px;
         }
-            @viewport {
-                width: device-width;
-                zoom: 1.0;
-            }
-            
-        }
-
     </style>
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="hamburger" onclick="toggleMenu()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <nav class="nav-links" id="navLinks">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="aboutme.html">About Me</a></li>
-                </ul>
-            </nav>
+    <div class="header">
+        <a href="blog.html" class="back-link">← back to blog</a>
+        <h1>Predicting Probability Distributions With Quantum Neural Networks</h1>
+        <div class="date">Research Project</div>
+    </div>
+
+    <div class="content">
+        <p>In quantum computing, a qubit is a basic unit of information used to encode quantum data. They are essentially the quantum equivalent of the traditional "bit" used in classical computers to encode information in binary form (0's and 1's). We can create qubits by manipulating quantum particles such as electrons, photons, and ions. Quantum computers use these qubits to perform advanced computations that would normally take a classical supercomputer thousands of years to complete. Here, however, I use qubits as merely a representation of quantum particles because a sufficient quantum particle dataset is not accessible.</p>
+
+        <p>What does a qubit look like? Imagine a two-unit sphere with a north and south pole that lie on separate points on the sphere:</p>
+
+        <img src="assets/images/Bloch_sphere.jpg" alt="Bloch Sphere" class="blog-image">
+
+        <p>As mentioned earlier, in classical computing a bit can only represent a 0 or 1, but a qubit can exist in a state of superposition of both 0 and 1 at the same time. The "Bloch Sphere" is a visualization of this superposition, where the north pole represents the state "0", the south pole represents the state "1", and any point on the sphere corresponds to a superposition of these two states. The equator represents states with equal probability of being measured as a 0 or 1.</p>
+
+        <p>We will skip over most of the math for now, but a more thorough explanation can be found <a href="https://www.quantum-inspire.com/kbase/what-is-a-qubit/" target="_blank">here</a>.</p>
+
+        <h2>Building The Network</h2>
+
+        <p>The model I have adapted for this project so far is:</p>
+
+        <div class="formula">
+            (P = I<sub>i</sub> × W) × P(I<sub>i</sub> × W)
         </div>
-    </header>
-    <main>
-        <section>
-        <h3 class="word-wrap">Predicting Probability Distributions With Quantum Neural Networks</h3>
-        <hr>
-            <p>In quantum computing, a qubit is a basic unit of information used to encode quantum data. They are essentially the quantum equivalent of the traditional "bit" used in classical computers to encode information in binary form (0's and 1's).
-                We can create qubits by manipulating quantum particles such as electrons, photons, and ions. Quantum computers use these qubits to perform advanced computations that would normally take a classical supercomputers thousands of years to complete.
-                Here, however, I use qubits as merely a representation of quantum particles because a sufficient quantum particle dataset is not accessible. </p>
-                <p>What does a qubit look like? Imagine a two-unit sphere with a north and south pole that lie on separate points on the sphere:  </p>
-            <img src="assets/images/Bloch_sphere.jpg" alt="Bloch_sphere" class="project-img">
-            <p>As mentioned earlier, in classical computing a bit can only represent a 0 or 1, but a qubit can exist in a state of superposition of both 0 and 1 at the same time. The "Bloch Sphere" is a visualization of this superposition, where the north pole represents the state "0", the south pole represents the state "1", and any point on the sphere corresponds to a superposition of these two states.
-                The equator represents states with equal probability of being measured as a 0 or 1.
-            </p>
-                <p>We will skip over most of the math for now, but a more thorough explanation can be found <a href="https://www.quantum-inspire.com/kbase/what-is-a-qubit/" target="_blank" class="other-links">here</a>.</p>
-                <h3>Building The Network</h3>
-                <p>The model I have adapted for this project so far is:</p>
-                <p>(P=I<sub>i</sub>× W) x P(I<sub>i</sub> × W)</p>
-                <p>Where P = probability distribution of qubit states, I = initial state, and W is our weight.</p>
-                <p>This will act as the first model, but it may be beneficial to implement additional models for scalability. I could add additional quantum gates other than the Hadamard gate, or more circuit layers.</p>
-        </section>
-    </main>
-    <footer>
-        <section>
-            <h3>Reach Me:</h3>
-            <hr>
-            <div class="social-links">
-                <a href="https://bsky.app/profile/kishun.bsky.social" target="_blank">Bluesky</a>
-                <a href="https://github.com/kishonsd" target="_blank">Github</a>
-                <a href="https://www.kaggle.com/kishunn" target="_blank">Kaggle</a>
-                <a href="https://www.mathworks.com/matlabcentral/profile/authors/32782902?s_tid=gn_comm" target="_blank">MATLAB</a>
-            </div>
-        </section>
-    </footer>
-    <script>
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-    </script>
+
+        <p>Where P = probability distribution of qubit states, I = initial state, and W is our weight.</p>
+
+        <p>This will act as the first model, but it may be beneficial to implement additional models for scalability. I could add additional quantum gates other than the Hadamard gate, or more circuit layers.</p>
+    </div>
 </body>
 </html>
