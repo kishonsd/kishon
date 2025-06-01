@@ -49,56 +49,44 @@
             margin-bottom: 2rem;
         }
 
-        .project {
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
+        .project-list {
+            list-style: none;
+        }
+
+        .project-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
             border-bottom: 1px solid #eee;
         }
 
-        .project:last-child {
+        .project-item:last-child {
             border-bottom: none;
         }
 
         .project-title {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-title a {
             color: #000;
+            text-decoration: none;
         }
 
-        .project-image {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
+        .project-title a:hover {
+            color: #0066cc;
         }
 
-        .project-description {
-            color: #444;
-            margin-bottom: 1rem;
-        }
-
-        .project-specs {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 8px;
-            color: #555;
+        .project-date {
+            color: #666;
             font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .project-excerpt {
+            color: #444;
             line-height: 1.5;
-        }
-
-        .spec-row {
-            margin-bottom: 0.3rem;
-        }
-
-        .spec-row:last-child {
-            margin-bottom: 0;
-        }
-
-        .spec-label {
-            font-weight: 600;
-            color: #333;
         }
 
         @media (max-width: 600px) {
@@ -115,34 +103,26 @@
         <p class="subtitle">things I build and work on</p>
     </div>
 
-    <div class="project">
-        <h2 class="project-title">Zephyr High Power Rocket</h2>
-        <img src="assets/images/Zephyr.jpg" alt="Zephyr Rocket" class="project-image">
-        
-        <p class="project-description">
-            A high-power model rocket built for learning aerodynamics and propulsion systems. This project combines my interests in physics and hands-on engineering.
-        </p>
+    <ul class="project-list">
+        <li class="project-item">
+            <div class="project-title">
+                <a href="zephyrrocket.html">Zephyr High Power Rocket</a>
+            </div>
+            <div class="project-date">Completed 2024</div>
+            <div class="project-excerpt">
+                A high-power model rocket built for learning aerodynamics and propulsion systems. This project combines my interests in physics and hands-on engineering.
+            </div>
+        </li>
 
-        <div class="project-specs">
-            <div class="spec-row"><span class="spec-label">Model:</span> 04997</div>
-            <div class="spec-row"><span class="spec-label">Length:</span> 56.400" (143.26 cm)</div>
-            <div class="spec-row"><span class="spec-label">Weight:</span> 44.000 oz (1247.38 g)</div>
-            <div class="spec-row"><span class="spec-label">Diameter:</span> 4.000" (10.16 cm)</div>
-            <div class="spec-row"><span class="spec-label">Fin Span:</span> 12.880" (32.72 cm)</div>
-            <div class="spec-row"><span class="spec-label">Fin Count:</span> 3</div>
-            <div class="spec-row"><span class="spec-label">Motor Size:</span> 38mm</div>
-            <div class="spec-row"><span class="spec-label">Recovery System:</span> 36" Nylon Parachute</div>
-            <div class="spec-row"><span class="spec-label">CP Location:</span> 44.89" (114.02 cm) from nose cone tip</div>
-            <div class="spec-row"><span class="spec-label">Manufacturer:</span> Apogee</div>
-        </div>
-    </div>
-
-    <!-- You can add more projects here in the future -->
-    <div class="project">
-        <h2 class="project-title">More projects coming soon...</h2>
-        <p class="project-description">
-            I'm always working on new things. Check back later or follow my progress on <a href="https://github.com/kishonsd" target="_blank">GitHub</a>.
-        </p>
-    </div>
+        <li class="project-item">
+            <div class="project-title">
+                <a href="qnn.html">Predicting Probability Distributions With Quantum Neural Networks</a>
+            </div>
+            <div class="project-date">In Progress</div>
+            <div class="project-excerpt">
+                Research into using quantum computing principles for neural networks, focusing on probability distributions and decision-making models using qubits and superposition.
+            </div>
+        </li>
+    </ul>
 </body>
 </html>
